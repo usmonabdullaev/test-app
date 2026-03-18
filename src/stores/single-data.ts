@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
-import { axios } from "@/services/axios";
 import { ApartmentDto } from "@/types/dto";
+import { axios } from "@/services/axios";
 
 type SingleDataState = {
   data: ApartmentDto | null;
@@ -10,7 +10,7 @@ type SingleDataState = {
 };
 
 type SingleDataActions = {
-  getData: (id: number) => Promise<void>;
+  getData: (id: string) => Promise<void>;
 };
 
 type SingleDataStore = SingleDataState & SingleDataActions;

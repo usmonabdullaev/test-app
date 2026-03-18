@@ -10,10 +10,7 @@ interface Props {
 export const Container = ({ children, className }: Props) => {
   return (
     <div
-      className={cn(
-        "container mx-auto max-w-360 px-16 pt-6 pb-24 max-md:px-5",
-        className,
-      )}
+      className={cn("container mx-auto max-w-360 px-16 max-md:px-5", className)}
     >
       {children}
     </div>

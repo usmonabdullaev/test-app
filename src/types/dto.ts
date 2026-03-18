@@ -1,5 +1,5 @@
 export interface ApartmentDto {
-  id: string;
+  id: number;
   title: string;
   price: number;
   rooms: number;
