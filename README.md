@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Marketplace (Test Project)
 
-## Getting Started
+## Описание
 
-First, run the development server:
+Приложение представляет собой маркетплейс недвижимости с возможностью:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Просмотра списка объявлений
+- Фильтрации (цена, комнаты и т.д.)
+- Сортировки
+- Просмотра страницы конкретного объекта
+- Добавления в избранное / корзину (mock)
+
+---
+
+## Стек технологий
+
+### Frontend
+
+- Next.js 16 (App Router)
+- React
+- Tailwind CSS
+- shadcn/ui
+- Zustand
+- Axios
+
+---
+
+## Backend
+
+В качестве backend используется сторонний mock-сервис:
+
+- mokky.dev — для имитации REST API
+
+http://mokky.dev - Сервис
+
+https://mokky.gitbook.io/welcome - Документация
+
+---
+
+## Установка и запуск
+
+### 1. Клонировать репозиторий
+
+```
+git clone <your-repo-url>
+cd <project-folder>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Установить зависимости
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Билд проекта
 
-## Learn More
+```
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 4. Запуск проекта
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+npm run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Открыть:
+http://localhost:3000
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Архитектура
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### App Router (Next.js)
+
+- /app/page.tsx — главная
+- /app/apartments/[id]/page.tsx — продукт
+
+### Zustand
+
+Используется для:
+
+- фильтров
+- loading состояния
+- пользователя (mock)
+
+---
+
+## UI
+
+- Адаптивный дизайн
+- Skeleton loaders
+- Pagination
+- Модальные окна
+
+---
+
+## Автор
+
+[Usmon Abdulloev](https://abdulloev-usmon.vercel.app)
